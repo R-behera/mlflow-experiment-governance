@@ -1,0 +1,97 @@
+{
+  "upstream": {
+    "owner": "mlflow",
+    "repo": "mlflow",
+    "source_url": "https://github.com/mlflow/mlflow",
+    "local_path": "/Users/Rb/Documents/LLM based projects /sources/mlflow__mlflow",
+    "branch": "master",
+    "default_branch": "master",
+    "commit": "04afc142180d8d0cd398988e09a25e3ab51309ca",
+    "fork_requested": false,
+    "fork_result": ""
+  },
+  "audit": {
+    "file_count": 6666,
+    "text_file_count": 5237,
+    "top_suffixes": [
+      [
+        ".py",
+        2429
+      ],
+      [
+        ".tsx",
+        1538
+      ],
+      [
+        ".ts",
+        548
+      ],
+      [
+        ".png",
+        439
+      ],
+      [
+        ".mdx",
+        295
+      ],
+      [
+        ".json",
+        128
+      ],
+      [
+        ".svg",
+        118
+      ],
+      [
+        ".md",
+        116
+      ]
+    ],
+    "style_counts": {
+      "hidden": 47,
+      "other": 2117,
+      "PascalCase": 1191,
+      "kebab-case": 804,
+      "snake_case": 2188,
+      "camelCase": 319
+    },
+    "token_hits": {
+      "TODO": [
+        "pyproject.toml",
+        "mlflow/environment_variables.py",
+        "mlflow/__init__.py",
+        "mlflow/ml-package-versions.yml",
+        "requirements/torch.txt",
+        "requirements/constraints.txt",
+        "dev/set_matrix.py",
+        "dev/js.sh"
+      ],
+      "XXX": [
+        "docs/api_reference/theme/mlflow/layout_old.html",
+        "mlflow/server/jobs/_job_runner.py"
+      ]
+    },
+    "findings": [
+      "No container packaging signal detected, which makes demos and deployment less portable.",
+      "No license file detected.",
+      "Mixed filename conventions detected: PascalCase, camelCase, kebab-case, snake_case.",
+      "Open maintenance markers detected: TODO in 406 file(s), XXX in 2 file(s).",
+      "Large files that may benefit from decomposition: mlflow/java/client/src/main/java/org/mlflow/api/proto/Datasets.java (6985 lines), mlflow/java/client/src/main/java/org/mlflow/api/proto/EvaluationDatasets.java (6756 lines), libs/typescript/package-lock.json (6563 lines)."
+    ],
+    "strengths": [
+      "Repository has a top-level README.",
+      "Repository exposes a dedicated docs surface.",
+      "Repository appears to include a test surface.",
+      "Repository has GitHub Actions or another CI entry point."
+    ],
+    "largest_files": [
+      "mlflow/java/client/src/main/java/org/mlflow/api/proto/Datasets.java (6985 lines)",
+      "mlflow/java/client/src/main/java/org/mlflow/api/proto/EvaluationDatasets.java (6756 lines)",
+      "libs/typescript/package-lock.json (6563 lines)"
+    ],
+    "has_tests": true,
+    "has_docs": true,
+    "has_ci": true,
+    "has_docker": false
+  }
+}
