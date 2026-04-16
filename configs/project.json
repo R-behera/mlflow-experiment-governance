@@ -1,73 +1,54 @@
 {
   "slug": "mlflow-experiment-governance",
-  "title": "MLflow Experiment Governance",
+  "title": "Credit Risk Model Governance Console",
   "project_type": "ml",
-  "domain": "Experiment Tracking and Governance",
-  "summary": "Turn experiment tracking into a governance product with model lineage, run reviews, and deployment-readiness checks.",
+  "domain": "Model Risk Management",
+  "summary": "Track model experiments, approvals, drift, and release decisions for credit risk and lending models under governance controls.",
   "tags": [
-    "mlflow",
-    "mlops",
+    "credit-risk",
     "governance",
-    "tracking"
+    "mlops",
+    "finance"
   ],
   "accent": "#2c82c8",
   "secondary_accent": "#2c45a9",
   "dashboard_metrics": [
     {
-      "label": "Model Lift",
-      "value": "61%",
-      "delta": "+6.4%"
+      "label": "Approval Cycle",
+      "value": "8.2d",
+      "delta": "-2.0d"
     },
     {
-      "label": "Serving P95",
-      "value": "183ms",
-      "delta": "-12ms"
+      "label": "Policy Completion",
+      "value": "91%",
+      "delta": "+4.2%"
     },
     {
-      "label": "Data Freshness",
-      "value": "7h",
-      "delta": "steady"
+      "label": "Post-Release Incidents",
+      "value": "2%",
+      "delta": "-0.8%"
     }
   ],
   "sample_features": {
-    "engagement_score": 135,
-    "tenure_days": 369,
-    "payment_miss_count": 1,
-    "segment": "enterprise",
-    "priority_flag": true
+    "model_family": "xgboost_pd",
+    "challenger_count": 2,
+    "regulated_segment": true,
+    "bias_review_complete": false,
+    "drift_signal": "moderate"
   },
   "sample_metrics": {
-    "acquisition": 80.1,
-    "activation": 68.5,
-    "retention": 75.2,
-    "revenue": 135.7
+    "approval_cycle_days": 8.2,
+    "policy_completion": 0.91,
+    "challenger_win_rate": 0.23,
+    "post_release_incidents": 0.02
   },
   "knowledge_base": [
-    "MLflow Experiment Governance is positioned as a Experiment Tracking and Governance starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
-    "The primary value proposition is: Turn experiment tracking into a governance product with model lineage, run reviews, and deployment-readiness checks.",
-    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
-    "Typical stakeholders include analytics, operations, product, and leadership teams working on mlflow, mlops, governance, tracking.",
-    "Source paper: MLflow: A Platform for the Machine Learning Lifecycle",
-    "Official repo: https://github.com/mlflow/mlflow",
-    "Production differentiation focus: Turn upstream experiment tracking and governance capabilities into a production-style application with operations-facing workflows.; Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.; Connect model behavior to concrete business decisions so the project is easier to evaluate and present."
+    "User: model risk governance teams overseeing lending models.",
+    "Primary pain: experiment data exists, but governance decisions still happen through scattered spreadsheets and meetings.",
+    "Decision output: approve, hold, or challenge a risk model release.",
+    "Business impact: lower release risk and faster regulated decision cycles."
   ],
-  "research_key": "mlflow-experiment-governance",
-  "research_score": 9.77,
-  "paper_title": "MLflow: A Platform for the Machine Learning Lifecycle",
-  "paper_url": "https://proceedings.mlsys.org/paper_files/paper/2019/file/5da53d41f8e5e6891be7d5dede88a82c-Paper.pdf",
-  "repo_url": "https://github.com/mlflow/mlflow",
-  "repo_org": "mlflow",
-  "why_high_score": [
-    "Official or primary upstream repo with 25390 GitHub stars.",
-    "Active maintenance signal with recent push at 2026-04-15T05:15:31Z.",
-    "The open source AI engineering platform for agents, LLMs, and ML models. MLflow enables teams of all sizes to debug, evaluate, monitor, and optimize production-quality AI applications while controlling costs and managing access to models and data."
-  ],
-  "differentiation_hooks": [
-    "Turn upstream experiment tracking and governance capabilities into a production-style application with operations-facing workflows.",
-    "Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.",
-    "Connect model behavior to concrete business decisions so the project is easier to evaluate and present."
-  ],
-  "app_archetype": "studio",
+  "app_archetype": "watchtower",
   "ui_profile": {
     "layout": "board",
     "surface": "ink",
@@ -81,36 +62,36 @@
   },
   "app_modules": [
     {
-      "label": "Studio 01",
-      "title": "Opportunity Scorecard",
-      "description": "Score the current opportunity shape before deciding what to prioritize next.",
+      "label": "Gov 01",
+      "title": "Release Readiness Score",
+      "description": "Score a credit model release for governance readiness before deployment.",
       "endpoint": "/score",
       "input_mode": "json",
-      "cta": "Score Opportunity",
-      "prefill": "{\n  \"features\": {\n    \"engagement_score\": 135,\n    \"tenure_days\": 369,\n    \"payment_miss_count\": 1,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": true\n  }\n}",
-      "hint": "Opportunity score and top factors will appear here.",
+      "cta": "Score Release",
+      "prefill": "{\n  \"features\": {\n    \"model_family\": \"xgboost_pd\",\n    \"challenger_count\": 2,\n    \"regulated_segment\": true,\n    \"bias_review_complete\": false\n  }\n}",
+      "hint": "Governance readiness score appears here.",
       "span": "normal"
     },
     {
-      "label": "Studio 02",
-      "title": "Metric Storyline",
-      "description": "Translate KPI movement into a concise summary for product, growth, or finance stakeholders.",
+      "label": "Gov 02",
+      "title": "Drift and Approval Review",
+      "description": "Compare today's challenger package with the last approved release.",
       "endpoint": "/analyze",
       "input_mode": "json",
-      "cta": "Summarize Metrics",
-      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 80.1,\n    \"activation\": 68.5,\n    \"retention\": 75.2,\n    \"revenue\": 135.7\n  },\n  \"baseline\": {\n    \"acquisition\": 73.69,\n    \"activation\": 63.02,\n    \"retention\": 69.18,\n    \"revenue\": 124.84\n  }\n}",
-      "hint": "Metric storyline summary will appear here.",
+      "cta": "Review Approval",
+      "prefill": "{\n  \"metrics\": {\n    \"approval_cycle_days\": 8.2,\n    \"policy_completion\": 91.0,\n    \"post_release_incidents\": 2.0\n  },\n  \"baseline\": {\n    \"approval_cycle_days\": 10.2,\n    \"policy_completion\": 86.8,\n    \"post_release_incidents\": 2.8\n  }\n}",
+      "hint": "Approval delta appears here.",
       "span": "wide"
     },
     {
-      "label": "Studio 03",
-      "title": "Decision Memo",
-      "description": "Generate the next action memo grounded in the project-specific context.",
+      "label": "Gov 03",
+      "title": "Committee Memo",
+      "description": "Draft the governance committee note for the lending model release.",
       "endpoint": "/recommend",
       "input_mode": "json",
       "cta": "Draft Memo",
-      "prefill": "{\n  \"prompt\": \"Recommend the next best action for MLflow Experiment Governance.\",\n  \"features\": {\n    \"engagement_score\": 135,\n    \"tenure_days\": 369,\n    \"payment_miss_count\": 1,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 80.1,\n    \"activation\": 68.5,\n    \"retention\": 75.2,\n    \"revenue\": 135.7\n  }\n}",
-      "hint": "Decision memo will appear here.",
+      "prefill": "{\n  \"prompt\": \"Write the model governance recommendation for the new PD challenger release.\",\n  \"features\": {\n    \"model_family\": \"xgboost_pd\",\n    \"drift_signal\": \"moderate\"\n  },\n  \"metrics\": {\n    \"policy_completion\": 0.91,\n    \"post_release_incidents\": 0.02\n  }\n}",
+      "hint": "Committee memo appears here.",
       "span": "normal"
     }
   ]

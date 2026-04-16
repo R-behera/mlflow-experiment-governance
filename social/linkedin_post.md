@@ -1,19 +1,16 @@
-Today I shipped **MLflow Experiment Governance**, a research-backed Experiment Tracking and Governance project inspired by **MLflow: A Platform for the Machine Learning Lifecycle**.
+Shipped **Credit Risk Model Governance Console** today.
 
-        What I changed from the base research or repo:
-        1. Turn upstream experiment tracking and governance capabilities into a production-style application with operations-facing workflows.
-2. Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.
-3. Connect model behavior to concrete business decisions so the project is easier to evaluate and present.
+This one is built around a real workflow for **Model risk managers and lending analytics leaders**.
 
-I also reviewed the upstream repo and focused on gaps like: No container packaging signal detected, which makes demos and deployment less portable.
+Problem:
+Credit models need traceable approvals, challenge reviews, and release evidence that generic experiment trackers don't surface clearly.
 
-        Why it matters:
-        - easier to demo
-        - easier to operate
-        - easier to explain to product, analytics, and engineering teams
+What it helps decide:
+Approve, challenge, or hold model releases before lending exposure changes reach production.
 
-        Repo: https://github.com/R-behera/mlflow-experiment-governance
-        Paper: https://proceedings.mlsys.org/paper_files/paper/2019/file/5da53d41f8e5e6891be7d5dede88a82c-Paper.pdf
-        Screenshot: demo/screenshot.png
+Why that matters:
+Reduce governance cycle time and model release risk.
 
-        #mlflow #mlops #governance #tracking #AI #MachineLearning #LLM #DataScience
+Repo: https://github.com/R-behera/mlflow-experiment-governance
+
+#creditrisk #governance #mlops #finance #AI #MachineLearning #DataScience

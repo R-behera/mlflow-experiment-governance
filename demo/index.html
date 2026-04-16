@@ -4,111 +4,103 @@
         <head>
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>MLflow Experiment Governance</title>
+          <title>Credit Risk Model Governance Console</title>
           <link rel="stylesheet" href="./styles.css">
         </head>
         <body class="surface-ink">
           <div class="page layout-board eyebrow-outline headline-tall modules-2 hero-align-split">
             <section class="hero">
               <div class="panel hero-copy">
-                <span class="eyebrow" data-health>Analytics Studio</span>
-                <h1 id="project-title">MLflow Experiment Governance</h1>
-                <p id="project-summary" class="lead">Turn experiment tracking into a governance product with model lineage, run reviews, and deployment-readiness checks.</p>
+                <span class="eyebrow" data-health>Signal Watchtower</span>
+                <h1 id="project-title">Credit Risk Model Governance Console</h1>
+                <p id="project-summary" class="lead">Track model experiments, approvals, drift, and release decisions for credit risk and lending models under governance controls.</p>
                 <ul id="project-tags" class="tag-list">
-                  <li>mlflow</li><li>mlops</li><li>governance</li><li>tracking</li>
+                  <li>credit-risk</li><li>governance</li><li>mlops</li><li>finance</li>
                 </ul>
               </div>
               <div class="panel hero-side">
                 <div class="metric-grid">
-                  <article class='card'><span>Model Lift</span><strong>61%</strong><em>+6.4%</em></article>
-<article class='card'><span>Serving P95</span><strong>183ms</strong><em>-12ms</em></article>
-<article class='card'><span>Data Freshness</span><strong>7h</strong><em>steady</em></article>
+                  <article class='card'><span>Approval Cycle</span><strong>8.2d</strong><em>-2.0d</em></article>
+<article class='card'><span>Policy Completion</span><strong>91%</strong><em>+4.2%</em></article>
+<article class='card'><span>Post-Release Incidents</span><strong>2%</strong><em>-0.8%</em></article>
                 </div>
                 <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Experiment Tracking and Governance</strong></article><article class='mini-card'><span>Application</span><strong>Analytics Studio</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
+                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>Model Risk Management</strong></article><article class='mini-card'><span>Application</span><strong>Signal Watchtower</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
                 </div>
               </div>
             </section>
             <section class="app-grid">
               <article class="panel module js-module span-normal">
           <div class="module-header">
-            <span>Studio 01</span>
-            <h2>Opportunity Scorecard</h2>
-            <p>Score the current opportunity shape before deciding what to prioritize next.</p>
+            <span>Gov 01</span>
+            <h2>Release Readiness Score</h2>
+            <p>Score a credit model release for governance readiness before deployment.</p>
           </div>
           <textarea class="js-input">{
   &quot;features&quot;: {
-    &quot;engagement_score&quot;: 135,
-    &quot;tenure_days&quot;: 369,
-    &quot;payment_miss_count&quot;: 1,
-    &quot;segment&quot;: &quot;enterprise&quot;,
-    &quot;priority_flag&quot;: true
+    &quot;model_family&quot;: &quot;xgboost_pd&quot;,
+    &quot;challenger_count&quot;: 2,
+    &quot;regulated_segment&quot;: true,
+    &quot;bias_review_complete&quot;: false
   }
 }</textarea>
           <div class="button-row">
-            <button class="js-run" data-endpoint="/score" data-input-mode="json">Score Opportunity</button>
+            <button class="js-run" data-endpoint="/score" data-input-mode="json">Score Release</button>
           </div>
-          <pre class="js-output">Opportunity score and top factors will appear here.</pre>
+          <pre class="js-output">Governance readiness score appears here.</pre>
         </article>
 <article class="panel module js-module span-wide">
           <div class="module-header">
-            <span>Studio 02</span>
-            <h2>Metric Storyline</h2>
-            <p>Translate KPI movement into a concise summary for product, growth, or finance stakeholders.</p>
+            <span>Gov 02</span>
+            <h2>Drift and Approval Review</h2>
+            <p>Compare today's challenger package with the last approved release.</p>
           </div>
           <textarea class="js-input">{
   &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 80.1,
-    &quot;activation&quot;: 68.5,
-    &quot;retention&quot;: 75.2,
-    &quot;revenue&quot;: 135.7
+    &quot;approval_cycle_days&quot;: 8.2,
+    &quot;policy_completion&quot;: 91.0,
+    &quot;post_release_incidents&quot;: 2.0
   },
   &quot;baseline&quot;: {
-    &quot;acquisition&quot;: 73.69,
-    &quot;activation&quot;: 63.02,
-    &quot;retention&quot;: 69.18,
-    &quot;revenue&quot;: 124.84
+    &quot;approval_cycle_days&quot;: 10.2,
+    &quot;policy_completion&quot;: 86.8,
+    &quot;post_release_incidents&quot;: 2.8
   }
 }</textarea>
           <div class="button-row">
-            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Summarize Metrics</button>
+            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Review Approval</button>
           </div>
-          <pre class="js-output">Metric storyline summary will appear here.</pre>
+          <pre class="js-output">Approval delta appears here.</pre>
         </article>
 <article class="panel module js-module span-normal">
           <div class="module-header">
-            <span>Studio 03</span>
-            <h2>Decision Memo</h2>
-            <p>Generate the next action memo grounded in the project-specific context.</p>
+            <span>Gov 03</span>
+            <h2>Committee Memo</h2>
+            <p>Draft the governance committee note for the lending model release.</p>
           </div>
           <textarea class="js-input">{
-  &quot;prompt&quot;: &quot;Recommend the next best action for MLflow Experiment Governance.&quot;,
+  &quot;prompt&quot;: &quot;Write the model governance recommendation for the new PD challenger release.&quot;,
   &quot;features&quot;: {
-    &quot;engagement_score&quot;: 135,
-    &quot;tenure_days&quot;: 369,
-    &quot;payment_miss_count&quot;: 1,
-    &quot;segment&quot;: &quot;enterprise&quot;,
-    &quot;priority_flag&quot;: true
+    &quot;model_family&quot;: &quot;xgboost_pd&quot;,
+    &quot;drift_signal&quot;: &quot;moderate&quot;
   },
   &quot;metrics&quot;: {
-    &quot;acquisition&quot;: 80.1,
-    &quot;activation&quot;: 68.5,
-    &quot;retention&quot;: 75.2,
-    &quot;revenue&quot;: 135.7
+    &quot;policy_completion&quot;: 0.91,
+    &quot;post_release_incidents&quot;: 0.02
   }
 }</textarea>
           <div class="button-row">
             <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Draft Memo</button>
           </div>
-          <pre class="js-output">Decision memo will appear here.</pre>
+          <pre class="js-output">Committee memo appears here.</pre>
         </article>
             </section>
             <footer class="footer">
-              <span>Experiment Tracking and Governance • ML • Analytics Studio</span>
+              <span>Model Risk Management • ML • Signal Watchtower</span>
               <span>mlflow-experiment-governance</span>
             </footer>
           </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "mlflow-experiment-governance", "title": "MLflow Experiment Governance", "project_type": "ml", "domain": "Experiment Tracking and Governance", "summary": "Turn experiment tracking into a governance product with model lineage, run reviews, and deployment-readiness checks.", "tags": ["mlflow", "mlops", "governance", "tracking"]}, "app_archetype": "studio", "ui_profile": {"layout": "board", "surface": "ink", "font_stack": "\"Plus Jakarta Sans\", \"Segoe UI\", sans-serif", "radius": 27, "shadow": 45, "eyebrow_style": "outline", "module_columns": 2, "hero_align": "split", "headline_mode": "tall"}, "app_modules": [{"label": "Studio 01", "title": "Opportunity Scorecard", "description": "Score the current opportunity shape before deciding what to prioritize next.", "endpoint": "/score", "input_mode": "json", "cta": "Score Opportunity", "prefill": "{\n  \"features\": {\n    \"engagement_score\": 135,\n    \"tenure_days\": 369,\n    \"payment_miss_count\": 1,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": true\n  }\n}", "hint": "Opportunity score and top factors will appear here.", "span": "normal"}, {"label": "Studio 02", "title": "Metric Storyline", "description": "Translate KPI movement into a concise summary for product, growth, or finance stakeholders.", "endpoint": "/analyze", "input_mode": "json", "cta": "Summarize Metrics", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 80.1,\n    \"activation\": 68.5,\n    \"retention\": 75.2,\n    \"revenue\": 135.7\n  },\n  \"baseline\": {\n    \"acquisition\": 73.69,\n    \"activation\": 63.02,\n    \"retention\": 69.18,\n    \"revenue\": 124.84\n  }\n}", "hint": "Metric storyline summary will appear here.", "span": "wide"}, {"label": "Studio 03", "title": "Decision Memo", "description": "Generate the next action memo grounded in the project-specific context.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Memo", "prefill": "{\n  \"prompt\": \"Recommend the next best action for MLflow Experiment Governance.\",\n  \"features\": {\n    \"engagement_score\": 135,\n    \"tenure_days\": 369,\n    \"payment_miss_count\": 1,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 80.1,\n    \"activation\": 68.5,\n    \"retention\": 75.2,\n    \"revenue\": 135.7\n  }\n}", "hint": "Decision memo will appear here.", "span": "normal"}], "sample_features": {"engagement_score": 135, "tenure_days": 369, "payment_miss_count": 1, "segment": "enterprise", "priority_flag": true}, "sample_metrics": {"acquisition": 80.1, "activation": 68.5, "retention": 75.2, "revenue": 135.7}, "knowledge_base": ["MLflow Experiment Governance is positioned as a Experiment Tracking and Governance starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Turn experiment tracking into a governance product with model lineage, run reviews, and deployment-readiness checks.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on mlflow, mlops, governance, tracking.", "Source paper: MLflow: A Platform for the Machine Learning Lifecycle", "Official repo: https://github.com/mlflow/mlflow", "Production differentiation focus: Turn upstream experiment tracking and governance capabilities into a production-style application with operations-facing workflows.; Add deployment packaging, monitoring hooks, and screenshot-ready demos instead of notebook-only output.; Connect model behavior to concrete business decisions so the project is easier to evaluate and present."], "dashboard_metrics": [{"label": "Model Lift", "value": "61%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "183ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "7h", "delta": "steady"}]}</script>
+          <script id="bootstrap-data" type="application/json">{"project": {"slug": "mlflow-experiment-governance", "title": "Credit Risk Model Governance Console", "project_type": "ml", "domain": "Model Risk Management", "summary": "Track model experiments, approvals, drift, and release decisions for credit risk and lending models under governance controls.", "tags": ["credit-risk", "governance", "mlops", "finance"]}, "app_archetype": "watchtower", "ui_profile": {"layout": "board", "surface": "ink", "font_stack": "\"Plus Jakarta Sans\", \"Segoe UI\", sans-serif", "radius": 27, "shadow": 45, "eyebrow_style": "outline", "module_columns": 2, "hero_align": "split", "headline_mode": "tall"}, "app_modules": [{"label": "Gov 01", "title": "Release Readiness Score", "description": "Score a credit model release for governance readiness before deployment.", "endpoint": "/score", "input_mode": "json", "cta": "Score Release", "prefill": "{\n  \"features\": {\n    \"model_family\": \"xgboost_pd\",\n    \"challenger_count\": 2,\n    \"regulated_segment\": true,\n    \"bias_review_complete\": false\n  }\n}", "hint": "Governance readiness score appears here.", "span": "normal"}, {"label": "Gov 02", "title": "Drift and Approval Review", "description": "Compare today's challenger package with the last approved release.", "endpoint": "/analyze", "input_mode": "json", "cta": "Review Approval", "prefill": "{\n  \"metrics\": {\n    \"approval_cycle_days\": 8.2,\n    \"policy_completion\": 91.0,\n    \"post_release_incidents\": 2.0\n  },\n  \"baseline\": {\n    \"approval_cycle_days\": 10.2,\n    \"policy_completion\": 86.8,\n    \"post_release_incidents\": 2.8\n  }\n}", "hint": "Approval delta appears here.", "span": "wide"}, {"label": "Gov 03", "title": "Committee Memo", "description": "Draft the governance committee note for the lending model release.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Memo", "prefill": "{\n  \"prompt\": \"Write the model governance recommendation for the new PD challenger release.\",\n  \"features\": {\n    \"model_family\": \"xgboost_pd\",\n    \"drift_signal\": \"moderate\"\n  },\n  \"metrics\": {\n    \"policy_completion\": 0.91,\n    \"post_release_incidents\": 0.02\n  }\n}", "hint": "Committee memo appears here.", "span": "normal"}], "sample_features": {"model_family": "xgboost_pd", "challenger_count": 2, "regulated_segment": true, "bias_review_complete": false, "drift_signal": "moderate"}, "sample_metrics": {"approval_cycle_days": 8.2, "policy_completion": 0.91, "challenger_win_rate": 0.23, "post_release_incidents": 0.02}, "knowledge_base": ["User: model risk governance teams overseeing lending models.", "Primary pain: experiment data exists, but governance decisions still happen through scattered spreadsheets and meetings.", "Decision output: approve, hold, or challenge a risk model release.", "Business impact: lower release risk and faster regulated decision cycles."], "dashboard_metrics": [{"label": "Approval Cycle", "value": "8.2d", "delta": "-2.0d"}, {"label": "Policy Completion", "value": "91%", "delta": "+4.2%"}, {"label": "Post-Release Incidents", "value": "2%", "delta": "-0.8%"}]}</script>
           <script src="./app.js"></script>
         </body>
         </html>
